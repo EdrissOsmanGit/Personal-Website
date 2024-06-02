@@ -268,9 +268,11 @@
             width:100%;
             border:3px solid rgb(0, 0, 0);
             padding: 0% 0%;
-            
         }
 
+        #skills p{
+            text-align: center;
+        }
         .icon-cont{
             max-width:85%;
             display:flex;
@@ -287,9 +289,7 @@
             border: 3px solid black;
             border-radius: 10px;
             
-            
         }
-        
 
         .icon:nth-child(2){
             transition-delay: 200ms;
@@ -538,8 +538,6 @@
         }
         
         .copy-right a{
-            width:55px;
-            height:55px;
             border-radius: 50%;
             background-color: #000000;
             flex-wrap: wrap;
@@ -662,7 +660,7 @@
             }
         }
 
-        /****** TimeLine ******/
+        /****** Experiance ******/
         @media only screen and (max-width: 852px) {
     
             .container-exp, .container-exp2{
@@ -693,6 +691,38 @@
                 gap:30px;
             }
     
+        }
+
+        @media only screen and (max-width:480px){
+            .allign{
+                display:flex;
+                justify-content: center;
+               
+            }
+            .container{
+                padding: 10px 2%;
+            }
+
+            .bio-text-cont2{
+                text-align: center;
+            }
+
+            .img-cont img{
+                height:100px;
+                width: 100px;
+                margin-right: 0px;
+                display:none;
+            }
+            
+            .icon-button{
+                height: 35px;
+                width: 35px;
+            }
+
+            .icon-button img{
+                height:20px;
+            }
+            
         }
 
 
@@ -785,7 +815,6 @@
         <div class="container">
             <div class="allign slide-in-left">
                 <h> Skills </h>
-                <p> Heres some of the lanuages, framworks, libraries I know. However, I am mainly proficient in C++</p>
             </div>
            
             <div class="icon-cont">
@@ -834,7 +863,7 @@
                     <p>Firebase</p>
                 </div>
             </div>
-           
+            <p class="center"> Heres some of the lanuages, framworks, libraries I know. However, I am mainly proficient in C++</p>
         </div>
     </div>
 
