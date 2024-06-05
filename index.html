@@ -192,19 +192,42 @@
         
         /* parallax effect*/
 
-        #parralax{
-            background-image: url('/svg/img/Screenshot\ 2024-05-29\ at\ 11.53.28\ PM.png');
-            height:95vh;
-            border:3px solid rgb(0, 0, 0);
+        #parralax {
+            background-image: url("/svg/img/Screenshot 2024-05-29 at 11.53.28 PM.png");
+            height: 95vh;
+            border: 3px solid rgb(0, 0, 0);
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            align-content: center;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-bottom-color: #FFF;
-            
         }
+
+    @supports (-webkit-overflow-scrolling: touch) {
+        #parralax {
+            background-attachment: scroll;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #parralax::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            background-size: inherit;
+            z-index: -1;
+            transform: translateZ(0) scale(1.5);
+        }
+}
         
        
         /* About / Bio */
@@ -592,7 +615,7 @@
 
             /***** Dropdown Menu *******/
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 900px) {
            
             .menu{
                 height:2px;
@@ -661,6 +684,7 @@
             nav ul{
                 display:none;
             }
+            
         }
 
         /****** Experiance ******/
